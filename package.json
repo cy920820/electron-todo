@@ -19,7 +19,7 @@
     "postinstall": "npm run lint:fix"
   },
   "build": {
-    "productName": "electron-todolist",
+    "productName": "爱上清单",
     "appId": "",
     "directories": {
       "output": "build"
