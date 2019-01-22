@@ -22,7 +22,7 @@
               <label @dblclick="editTodo(todo)">{{ todo.title }}</label>
               <button class="destroy" @click="delTodo(todo)"></button>
             </div>
-            <input type="text" class="edit" v-todo-focus="todo === editedTodo"  v-model.trim="todo.title" @blur="cancleEditTodo(todo)" @keyup.enter="doneEditTodo(todo)">
+            <input type="text" class="edit" v-todo-focus="todo === editedTodo"  v-model.trim="todo.title" @keyup.esc="cancleEditTodo(todo)" @blur="doneEditTodo(todo)" @keyup.enter="doneEditTodo(todo)">
           </li>
         </ul>
       </section>
@@ -200,10 +200,11 @@ export default {
           this.lastId = 0
         }
 
+        // 但凡todoList有任何改变（增、删、改），都会更新缓存里的todoList
         setLocal('todoList', this.todoList)
       },
 
-      deep: true // 监听对象内部值的变化
+      deep: true // 监听对象内部值的变化, 利用双向绑定更新视图
     }
   },
 

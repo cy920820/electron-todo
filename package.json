@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Cui-y <cuiyang673308817@gmail.com>",
   "description": "electron-list",
-  "license": null,
+  "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
