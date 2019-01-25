@@ -2,8 +2,8 @@
 
 ## 应用简介
 
-应用名称：爱上清单
-功能：简洁版的todolist管理工具，是基于Electron构建的跨平台的桌面Todos应用
+应用名称：爱上清单  
+功能：简洁版的todolist管理工具，是基于Electron构建的跨平台的桌面Todos应用  
 
 ## 截图
 
