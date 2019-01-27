@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
 
 /**
  * Set `__static` path to static files in production
@@ -37,7 +37,6 @@ function createWindow () {
   /**
    * 增加菜单和快捷键
    */
-  const Menu = require('menu')
   if (process.platform === 'darwin') {
     const template = [
       {
