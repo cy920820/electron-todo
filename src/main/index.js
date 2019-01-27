@@ -33,6 +33,36 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  /**
+   * 增加菜单和快捷键
+   */
+  const Menu = require('menu')
+  if (process.platform === 'darwin') {
+    const template = [
+      {
+        label: 'Application',
+        submenu: [
+          { label: 'About Application', selector: 'orderFrontStandardAboutPanel:' },
+          { label: 'Quit', accelerator: 'Command+Q', click: function () { app.quit() } }
+        ]
+      },
+      {
+        label: 'Edit',
+        submenu: [
+          { label: 'Cut', accelerator: 'CmdOrCtrl+X', selector: 'cut:' },
+          { label: 'Copy', accelerator: 'CmdOrCtrl+C', selector: 'copy:' },
+          { label: 'Paste', accelerator: 'CmdOrCtrl+V', selector: 'paste:' },
+          { label: 'Select All', accelerator: 'CmdOrCtrl+A', selector: 'selectAll:' },
+          { label: 'Undo', accelerator: 'CmdOrCtrl+Z', selector: 'undo:' },
+          { label: 'Redo', accelerator: 'Shift+CmdOrCtrl+Z', selector: 'redo:' }
+        ]
+      }
+    ]
+    Menu.setApplicationMenu(Menu.buildFromTemplate(template))
+  } else {
+    Menu.setApplicationMenu(null)
+  }
 }
 
 app.on('ready', createWindow)
