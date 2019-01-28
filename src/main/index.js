@@ -47,7 +47,7 @@ function createWindow () {
         ]
       },
       {
-        label: 'Edit',
+        label: '编辑',
         submenu: [
           { label: 'Cut', accelerator: 'CmdOrCtrl+X', selector: 'cut:' },
           { label: 'Copy', accelerator: 'CmdOrCtrl+C', selector: 'copy:' },

@@ -1,7 +1,7 @@
 {
   "name": "electron-todolist",
   "version": "0.0.1",
-  "author": "Cui-y <cuiyang673308817@gmail.com>",
+  "author": "cui yang <cuiyang673308817@gmail.com>",
   "description": "electron-list",
   "license": "MIT",
   "main": "./dist/electron/main.js",
